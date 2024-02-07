@@ -31,7 +31,7 @@ def __filter_object(json_obj: dict) :
         return False
     if __is_too_much_punctuation(json_obj["en"]) or __is_too_much_punctuation(json_obj["el"]):
         return False
-    upper_threshold = 500
+    upper_threshold = 300 # experimented to find this, trying to filter out lists and long math equations
     lower_threshold = 10
     token_count = count_tokens(json_obj["en"])
     if token_count > upper_threshold or token_count < lower_threshold:

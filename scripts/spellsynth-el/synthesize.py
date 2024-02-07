@@ -89,8 +89,8 @@ def main(
                     'from': translation['from']
                 })
                 synthesis_failures += 1
-        if (i % 100):
-            print(f'Completed {i} / {len(sorted_translations)}')
+        if (i >= labelling_start_index and i % 100):
+            print(f'Completed {i + 1} / {len(sorted_translations)}')
             print(f'{synthesis_successes} / {len(completions)} synthesis successes')
             print(f'{synthesis_failures} / {len(completions)} synthesis failures')
 
@@ -102,7 +102,7 @@ if __name__ == '__main__':
     OUTPUT_FILEPATH = 'data/processed/from_processed/en-el.json'
     EN_TO_EL_PROMPT = 'Give an array with a few labels about the above translation from English to Modern Greek. Each label should be one sentence, phrased as an imperative, about important style, tone, or vocabulary of how the translation was done. (NOT THE CONTENT) Your array should be presented in JSON format: {"labels": [] // list of strings }.'
     EL_TO_EN_PROMPT = 'Give an array with a few labels about the above translation from Modern Greek to English. Each label should be one sentence, phrased as an imperative, about important style, tone, or vocabulary of how the translation was done. (NOT THE CONTENT) Your array should be presented in JSON format: {"labels": [] // list of strings }.'
-    NUM_OF_LABELLED = 20000
+    NUM_OF_LABELLED = 41200 # because there's an error rate of about 3%
     main(
         INPUT_FILEPATH, 
         OUTPUT_FILEPATH, 
