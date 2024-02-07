@@ -65,6 +65,8 @@ def main(tmx_filepath: str, output_filepath: str):
         json.dump(translations, file)
 
 if __name__ == '__main__':
-    TMX_FILEPATH = "data/raw/el-en.tmx"
-    OUTPUT_FILEPATH = "data/processed/from_raw/wikimatrix-en-el.json"
-    main(TMX_FILEPATH, OUTPUT_FILEPATH)
+    TMX_FILEPATHS = [
+        ["data/raw/el-en.tmx", "el", "en"]
+    ]
+    OUTPUT_FILEPATH = "data/processed/from_raw/wikimatrix-kaleidograph.json"
+    main(TMX_FILEPATHS, OUTPUT_FILEPATH)
