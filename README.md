@@ -2,20 +2,6 @@
 
 <i>Currently under construction. Please check back later.</i>
 
-A System for Fine-Tuning <b>Spe</b>cialized <b>L</b>arge <b>L</b>anguage Models from <b>Synth</b>etic Data 
-
-<a href='http://spellsynth.com'>spellsynth.com</a>
-
-Archie McKenzie '24
-<br/>
-Department of Computer Science
-<br/>
-Princeton University
-
-2023-24 Thesis
-<br/>
-Advised by Professor Brian Kernighan
-
 ## Introduction
 
 Spellsynth is system for creating synthetic datasets to fine-tune powerful LLM translators.
